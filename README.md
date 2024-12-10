@@ -1,2 +1,5 @@
-# me
-Um pouco sobre mim
+# UM POUCO SOBRE MIM
+
+Usando GIT
+
+# Teste
