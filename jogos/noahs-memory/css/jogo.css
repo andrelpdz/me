@@ -59,7 +59,10 @@ li {
 
 /* Default square styling */
 .deck .square {
-    background-image: url(img/img9.png);
+    background-image: url(../img/img9.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 6px;
     filter: drop-shadow(1px 1px 3px black);
     color: #ffffff;
