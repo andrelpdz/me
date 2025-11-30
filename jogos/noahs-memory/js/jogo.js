@@ -153,7 +153,7 @@ function flipSquares() {
   let $this = $(this);
 
   // Traverse DOM element for this square's icon class
-  let $thisClass = $this[0].firstChild.classList[1];
+  let $thisImg = $this[0].firstChild.attr('src');
 
   // Prevent flipping over more than two cards at once
   if ($this.hasClass('open') || $this.hasClass('match') || $('.open').length === 2) {
@@ -170,7 +170,7 @@ function flipSquares() {
     $this.addClass('open show flipInY');
 
     // Add class of clicked square to the temp array
-    arrIconsOpen.push($thisClass);
+    arrIconsOpen.push($thisImg);
   };
 
   // If two squares have been flipped, check to see if they match
