@@ -153,7 +153,7 @@ function flipSquares() {
   let $this = $(this);
 
   // Traverse DOM element for this square's icon class
-  let $thisImg = $this[0].firstChild.attr('src');
+  let $thisImg = $this.find("img").attr("src");
 
   // Prevent flipping over more than two cards at once
   if ($this.hasClass('open') || $this.hasClass('match') || $('.open').length === 2) {
