@@ -119,6 +119,7 @@ function resetGameWarning() {
 function checkMatch() {
 
   // If the array elements are the same
+  console.log(arrIconsOpen[0]+" === "+arrIconsOpen[1]);
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
     $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
   } else {
@@ -174,7 +175,7 @@ function flipSquares() {
 
   // If two squares have been flipped, check to see if they match
   if (arrIconsOpen.length === 2) {
-    //checkMatch();
+    checkMatch();
   };
 };
 
