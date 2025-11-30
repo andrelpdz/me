@@ -74,13 +74,13 @@ li {
 
 /* Emphasize square on hover */
 .square-hover {
-    box-shadow: 5px 10px 20px var(--color-shadow);
+    
     transform: scale(1.02);
 }
 
 /* Change background color of square that has been flipped */
 .deck .square.open {
-    background: var(--color-square-open);
+    
     cursor: default;
 }
 
@@ -91,7 +91,7 @@ li {
 
 /* Change styling to identify squares that have been matched */
 .deck .square.match {
-    background: var(--color-square-match);
+    
     cursor: default;
     font-size: 33px;
 }
