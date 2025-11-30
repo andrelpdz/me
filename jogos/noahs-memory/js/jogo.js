@@ -1,4 +1,9 @@
-const arrIcons = ['burn', 'burn', 'infinity', 'infinity', 'moon', 'moon', 'skull', 'skull', 'code-branch', 'code-branch', 'terminal', 'terminal', 'crow', 'crow', 'seedling', 'seedling'];
+///////////////////////////////////////
+//  1a. Ready
+///////////////////////////////////////
+
+// Variables
+const arrIcons = ['img1.png', 'img1.png', 'img2.png', 'img2.png', 'img3.png', 'img3.png', 'img4.png', 'img4.png', 'img5.png', 'img5.png', 'img6.png', 'img6.png', 'img7.png', 'img7.png', 'img8.png', 'img8.png'];
 let $deck = $('.deck'),
   $moves = $('.moves'),
   $movesLabel = $('.moves-label'),
@@ -50,7 +55,7 @@ function init() {
 function createSquares() {
   let icons = shuffle(arrIcons);
   for (let icon of icons) {
-    $deck.append($('<li class="col-3 p-3"><div class="square p-3 d-flex align-items-center justify-content-center animated"><i class="fas fa-' + icon + '"></i></div></li>'));
+    $deck.append($('<li class="col-3 p-1"><div class="square p-3 d-flex align-items-center justify-content-center animated"><img class="cardimg" src="img/'+icon+'"></div></li>'));
   };
 };
 
