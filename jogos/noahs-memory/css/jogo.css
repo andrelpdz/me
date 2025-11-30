@@ -59,6 +59,7 @@ li {
 
 /* Default square styling */
 .deck .square {
+    background-image: url(img/img9.png);
     border-radius: 6px;
     filter: drop-shadow(1px 1px 3px black);
     color: #ffffff;
@@ -74,13 +75,11 @@ li {
 
 /* Emphasize square on hover */
 .square-hover {
-    
     transform: scale(1.02);
 }
 
 /* Change background color of square that has been flipped */
 .deck .square.open {
-    
     cursor: default;
 }
 
