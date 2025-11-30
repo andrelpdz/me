@@ -1,0 +1,130 @@
+/* Defining color palette to be used throughout CSS */
+:root {
+    --color-gradient-1: #02ccba;
+    --color-gradient-2: #aa7ecd;
+    --color-square-open: #02b3e4;
+    --color-square-match: #02ccba;
+    --color-shadow: rgba(46, 61, 73, 0.5);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background: #ffffff url('https://res.cloudinary.com/rdelk/image/upload/v1528058711/FEND%20-%20Project%202/geometry2.png');
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    height: 680px;
+    max-width: 660px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+/**************************************
+    2. Squares
+**************************************/
+
+/* Background container for squares */
+.deck {
+    background: linear-gradient(160deg, var(--color-gradient-1) 0%, var(--color-gradient-2) 100%);
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px var(--color-shadow);
+}
+
+/* Default square styling */
+.deck .square {
+    background: #2e3d49;
+    border-radius: 6px;
+    box-shadow: 5px 2px 20px var(--color-shadow);
+    color: #ffffff;
+    cursor: pointer;
+    height: 120px;
+    font-size: 0;
+}
+
+/* List items under the deck */
+.deck .li {
+    align-content: center;
+}
+
+/* Emphasize square on hover */
+.square-hover {
+    box-shadow: 5px 10px 20px var(--color-shadow);
+    transform: scale(1.02);
+}
+
+/* Change background color of square that has been flipped */
+.deck .square.open {
+    background: var(--color-square-open);
+    cursor: default;
+}
+
+/* Make icons appear when square is flipped */
+.deck .square.show {
+    font-size: 33px;
+}
+
+/* Change styling to identify squares that have been matched */
+.deck .square.match {
+    background: var(--color-square-match);
+    cursor: default;
+    font-size: 33px;
+}
+
+
+
+/**************************************
+    3. Scoring
+**************************************/
+
+/* Keep star icons in a horizontal line */
+.score-panel .stars li {
+    display: inline-block;
+    list-style: none;
+}
+
+/* Make cursor a pointer to show that "Reset" icon is clickable */
+.score-panel .restart {
+    cursor: pointer;
+}
+
+
+
+/**************************************
+    4. Animation
+**************************************/
+
+/* Animation speed */
+.square.animated.flipInY {
+    animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+}
