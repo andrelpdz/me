@@ -135,4 +135,4 @@ li {
     opacity: 0;
 }
 
-.open .cardimg{ opacity: 1; }
+.open .cardimg, .match .cardimg{ opacity: 1; }
