@@ -121,7 +121,7 @@ function checkMatch() {
   // If the array elements are the same
   console.log(arrIconsOpen[0]+" === "+arrIconsOpen[1]);
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
-    $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
+    $deck.find('.open').removeClass('show flipInY shake').addClass('match rubberBand');
   } else {
     setTimeout(function () {
       $deck.find('.open').addClass('shake').removeClass('open show flipInY');
