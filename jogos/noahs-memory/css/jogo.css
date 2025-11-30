@@ -128,3 +128,7 @@ li {
     -moz-animation-duration: 0.5s;
     -webkit-animation-duration: 0.5s;
 }
+
+.square img{
+    width:100%;
+}
