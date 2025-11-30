@@ -59,12 +59,11 @@ li {
 
 /* Default square styling */
 .deck .square {
-    background: #2e3d49;
     border-radius: 6px;
-    box-shadow: 5px 2px 20px var(--color-shadow);
+    filter: drop-shadow(1px 1px 3px black);
     color: #ffffff;
     cursor: pointer;
-    height: 120px;
+    height: 129px;
     font-size: 0;
 }
 
@@ -131,4 +130,7 @@ li {
 
 .cardimg{
     width:100%;
+    opacity: 0;
 }
+
+.open .cardimg{ opacity: 1; }
