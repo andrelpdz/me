@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>André LPDZ — Professor e Desenvolvedor</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="/css/jogo.css" rel="stylesheet" type="text/css">
+</head>  
+<body>
+    <div class="container">
+        <header class="row text-center">
+            <h1 class="col pt-2 mt-2">Noah's Memory</h1>
+        </header>
+
+        <section class="row score-panel">
+            <ul class="stars col-3 m-0 p-2" title="Score">
+                <li>
+                    <i class="fas fa-star"></i>
+                </li>
+                <li>
+                    <i class="fas fa-star"></i>
+                </li>
+                <li>
+                    <i class="fas fa-star"></i>
+                </li>
+            </ul>
+
+            <div class="col-3 m-0 p-2 text-center" title="Attempted matches">
+                <span class="moves">0</span>
+                <span class="moves-label">Moves</span>
+            </div>
+
+            <div class="col-3 m-0 p-2 text-center" title="Time elapsed">
+                <span class="timer">0</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+
+            <div class="restart col-3 m-0 p-2 text-right" title="Start over">
+                <i class="fas fa-redo"></i>
+            </div>
+        </section>
+
+        <ul class="row deck p-4">
+            <!-- Created dynamically via js/app.js -->
+        </ul>
+    </div>
+  <script src="js/jogo.js"></script>
+</body>
+</html>
