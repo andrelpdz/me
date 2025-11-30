@@ -55,7 +55,7 @@ function init() {
 function createSquares() {
   let icons = shuffle(arrIcons);
   for (let icon of icons) {
-    $deck.append($('<li class="col-3 p-3"><div class="square p-3 d-flex align-items-center justify-content-center animated"><img src="img/'+icon+'"></div></li>'));
+    $deck.append($('<li class="col-3 p-1"><div class="square p-3 d-flex align-items-center justify-content-center animated"><img src="img/'+icon+'"></div></li>'));
   };
 };
 
