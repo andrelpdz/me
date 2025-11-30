@@ -174,7 +174,7 @@ function flipSquares() {
 
   // If two squares have been flipped, check to see if they match
   if (arrIconsOpen.length === 2) {
-    checkMatch();
+    //checkMatch();
   };
 };
 
