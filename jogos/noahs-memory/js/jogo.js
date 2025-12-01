@@ -15,6 +15,7 @@ let $deck = $('.deck'),
   paused = false,
   started = false,
   timeCount = 0;
+  baseSom = "noah";
 
 // Run after the page has finished loading
 $(document).ready(function () {
@@ -120,14 +121,14 @@ function checkMatch() {
   let som = arrIconsOpen[0]+"";
   som = som.replace("img/","");
   som = som.replace(".png","");
-  som = som.replace("img","som");
+  som = baseSom+"-"+som.replace("img","som");
 
   // If the array elements are the same
   console.log(som);
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
     playSound("win");
     setTimeout(function () {
-      
+      if(baseSom == "noah"){baseSom="zoe";}else{baseSom="noah";}
       playSound(som);
       $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
     }, 500);
@@ -320,6 +321,7 @@ function playSound(som){
 
   var audioPlayer = $('#audioPlayer')[0];
   var newAudioFile = 'sound/'+som+'.mp3'; 
+  
 
   if (!audioPlayer.paused) {
       audioPlayer.pause();
