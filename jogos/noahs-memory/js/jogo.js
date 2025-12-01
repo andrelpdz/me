@@ -131,7 +131,7 @@ function checkMatch() {
     
   } else {
     setTimeout(function () {
-      playSound("erro");
+      playSound("err");
       $deck.find('.open').addClass('shake').removeClass('open show flipInY');
     }, 500);
   };
