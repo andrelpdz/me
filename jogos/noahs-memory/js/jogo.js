@@ -253,7 +253,7 @@ function moveCounter() {
 
 // Start the timer
 function startTimer() {
-  playSound("intro");
+ // playSound("intro");
 
   // Increment the counter every second
   timeCountVar = setInterval(function () {
