@@ -121,9 +121,11 @@ function checkMatch() {
   // If the array elements are the same
   console.log(arrIconsOpen[0]+" === "+arrIconsOpen[1]);
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
+    playSound("win");
     $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
   } else {
     setTimeout(function () {
+      playSound("erro");
       $deck.find('.open').addClass('shake').removeClass('open show flipInY');
     }, 500);
   };
@@ -167,6 +169,8 @@ function flipSquares() {
 
   // If the temporary array doesn't yet have two items in it
   if (arrIconsOpen.length < 2) {
+    playSound("flip");
+
     $this.addClass('open show flipInY');
 
     // Add class of clicked square to the temp array
@@ -239,6 +243,7 @@ function moveCounter() {
 
 // Start the timer
 function startTimer() {
+  playSound("intro");
 
   // Increment the counter every second
   timeCountVar = setInterval(function () {
@@ -278,6 +283,7 @@ function resetTimer() {
 
 // Modal dialog to announce that game has been won
 function winGame() {
+  playSound("fim");
 
   // Pause the timer
   paused = true;
@@ -299,3 +305,17 @@ function winGame() {
     }
   });
 };
+
+function playSound(som){
+  var audioPlayer = $('#audioPlayer')[0];
+  var newAudioFile = 'sound/'+som+'.mp3'; 
+
+  if (!audioPlayer.paused) {
+      audioPlayer.pause();
+  }
+
+  audioPlayer.src = newAudioFile;
+
+  audioPlayer.load();
+  audioPlayer.play();
+}
