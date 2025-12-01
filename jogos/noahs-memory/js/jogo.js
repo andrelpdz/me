@@ -168,6 +168,8 @@ function flipSquares() {
     return;
   };
 
+  playSound("flip");
+
   // Start timer when first square is clicked
   if (started === false) {
     startTimer();
@@ -175,8 +177,6 @@ function flipSquares() {
 
   // If the temporary array doesn't yet have two items in it
   if (arrIconsOpen.length < 2) {
-    playSound("flip");
-
     $this.addClass('open show flipInY');
 
     // Add class of clicked square to the temp array
@@ -314,6 +314,7 @@ function winGame() {
 
 function playSound(som){
   console.log(som);
+  
   var audioPlayer = $('#audioPlayer')[0];
   var newAudioFile = 'sound/'+som+'.mp3'; 
 
