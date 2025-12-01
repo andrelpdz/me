@@ -122,7 +122,13 @@ function checkMatch() {
   console.log(arrIconsOpen[0]+" === "+arrIconsOpen[1]);
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
     playSound("win");
-    $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
+    setTimeout(function () {
+      let som = arrIconsOpen[0].replace("img/","");
+          som = som.replace(".mp3","");
+      playSound(som);
+      $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
+    }, 500);
+    
   } else {
     setTimeout(function () {
       playSound("erro");
