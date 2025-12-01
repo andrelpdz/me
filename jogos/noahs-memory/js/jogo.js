@@ -302,10 +302,10 @@ function winGame() {
   // Announcement and option to reset
   vex.dialog.confirm({
     // message: 'You win with ' + (3 - $('.star').length) + ' or ' + starCount + ' stars',
-    unsafeMessage: `<div class="text-center"><p>Way to go!</p>` +
-      `<p>You just won the game with ${starCount}/3 star rating.</p>` +
-      `<p>It took you ${timeCount} seconds to complete.</p>` +
-      `<p>Would you like to play again?</p></div>`,
+    unsafeMessage: `<div class="text-center"><p>Muito bem!</p>` +
+      `<p>Você ganhou ${starCount}/3 estrelas.</p>` +
+      `<p>Seu tempo foi ${timeCount} segundos.</p>` +
+      `<p>Deseja Jogar novamente?</p></div>`,
     callback: function (value) {
       if (value) {
         resetGame();
