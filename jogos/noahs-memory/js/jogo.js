@@ -307,6 +307,7 @@ function winGame() {
 };
 
 function playSound(som){
+  console.log(som);
   var audioPlayer = $('#audioPlayer')[0];
   var newAudioFile = 'sound/'+som+'.mp3'; 
 
