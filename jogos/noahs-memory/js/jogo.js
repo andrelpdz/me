@@ -123,8 +123,10 @@ function checkMatch() {
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
     playSound("win");
     setTimeout(function () {
-      let som = arrIconsOpen[0].replace("img/","");
+      let som = arrIconsOpen[0]+"";
+          som = som.replace("img/","");
           som = som.replace(".mp3","");
+          som = som.replace("img","som");
       playSound(som);
       $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
     }, 500);
@@ -314,7 +316,7 @@ function winGame() {
 
 function playSound(som){
   console.log(som);
-  
+
   var audioPlayer = $('#audioPlayer')[0];
   var newAudioFile = 'sound/'+som+'.mp3'; 
 
