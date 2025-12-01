@@ -117,16 +117,17 @@ function resetGameWarning() {
 
 //  Check if the two open squares match
 function checkMatch() {
+  let som = arrIconsOpen[0]+"";
+  som = som.replace("img/","");
+  som = som.replace(".png","");
+  som = som.replace("img","som");
 
   // If the array elements are the same
-  console.log(arrIconsOpen[0]+" === "+arrIconsOpen[1]);
+  console.log(som);
   if (arrIconsOpen[0] === arrIconsOpen[1]) {
     playSound("win");
     setTimeout(function () {
-      let som = arrIconsOpen[0]+"";
-          som = som.replace("img/","");
-          som = som.replace(".mp3","");
-          som = som.replace("img","som");
+      
       playSound(som);
       $deck.find('.open').removeClass('open show flipInY shake').addClass('match rubberBand');
     }, 500);
