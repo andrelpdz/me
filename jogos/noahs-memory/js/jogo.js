@@ -25,6 +25,11 @@ $(document).ready(function () {
 
   // Reset the game when button is clicked
   $reset.click(resetGameWarning);
+
+  $(".start").on('click',function(){
+    $(this).remove();
+    playSound("intro");
+  });
 });
 
 

@@ -30,6 +30,17 @@ body {
     font-family: 'Coda', cursive;
 }
 
+.start{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 45vh;
+    background: #ffffff url(../img/bg.png);
+}
+
 .container {
     height: 680px;
     max-width: 660px;
